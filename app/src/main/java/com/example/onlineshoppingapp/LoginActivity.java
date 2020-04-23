@@ -3,6 +3,7 @@ package com.example.onlineshoppingapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -59,6 +60,9 @@ public class LoginActivity extends AppCompatActivity {
                         User login = dataSnapshot.child(username).getValue(User.class);
                         if(login.getPassword().equals(password)){
                             Toast.makeText(LoginActivity.this, "Login Success", Toast.LENGTH_SHORT).show();
+                            Intent s = new Intent(getApplicationContext(), DashboardActivity.class);
+                            startActivity(s);
+
                         }
                         else {
                             Toast.makeText(LoginActivity.this, "Password is Wrong", Toast.LENGTH_SHORT).show();
