@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DashboardActivity" >
+    <item android:id="@+id/action_search"
+        android:icon="@drawable/search_icon"
+        android:title="Arama"
+        android:orderInCategory="100"
+        app:showAsAction="always" />
+    <item android:id="@+id/action_okey"
+        android:icon="@drawable/unselected_item"
+        android:title="Onay"
+        android:orderInCategory="100"
+        app:showAsAction="always" />
+</menu>
