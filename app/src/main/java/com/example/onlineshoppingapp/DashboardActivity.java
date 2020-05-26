@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.onlineshoppingapp.Model.ItemAdapter;
 
@@ -50,8 +51,19 @@ public class DashboardActivity extends AppCompatActivity {
         return  true;
     }
 
+
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+        if (id == R.id.action_search) {
+            Toast.makeText(getApplicationContext(),"Search Button",Toast.LENGTH_LONG).show();
+            return true;
+        }
+        if (id == R.id.action_okey) {
+            Toast.makeText(getApplicationContext(),"Choice Button",Toast.LENGTH_LONG).show();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 }
